@@ -24,6 +24,7 @@ public class Loops {
 
     /** A1. Suma 1 + 2 + … + limit. Si limit es 0 o negativo, devuelve 0. */
     public static int sumTo(int limit) {
+        //Comentario
         return 0; // TODO
     }
 

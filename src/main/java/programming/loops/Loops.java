@@ -24,18 +24,40 @@ public class Loops {
 
     /** A1. Suma 1 + 2 + … + limit. Si limit es 0 o negativo, devuelve 0. */
     public static int sumTo(int limit) {
-        //Comentario
-        return 0; // TODO
+
+        int sum = 0;
+        for (int i = 1; i <= limit; i++) {
+            sum += i;
+        }
+        return sum;
     }
 
     /** A2. number! = 1 × 2 × … × number, para number de 0 a 20. 0! es 1. */
     public static long factorial(int number) {
-        return 0; // TODO
+        long factorial = 1;
+
+        for (int i = 1; i <= number; i++) {
+            factorial *= i;
+        }
+
+        return factorial;
     }
 
     /** A3. Cantidad de dígitos de number. El 0 tiene un dígito; el signo no cuenta (-450 tiene 3). */
     public static int countDigits(int number) {
-        return 0; // TODO
+        int contador = 0;
+        long n = Math.abs((long) number);
+
+        if (n == 0) {
+            return 1;
+        }
+
+        while (n > 0) {
+            contador++;
+            n /= 10;
+        }
+
+        return contador;
     }
 
     /**
@@ -43,7 +65,13 @@ public class Loops {
      * Ejemplo: 3 → "3 2 1 ¡Despegue!". Con 0 → "¡Despegue!".
      */
     public static String countdown(int start) {
-        return ""; // TODO
+        String resultado = "";
+
+        for (int i = start; i >= 1; i--) {
+            resultado += i + " ";
+        }
+
+        return resultado + "¡Despegue!";
     }
 
     // ---------------------------------------------------------------- Parte B ★★
